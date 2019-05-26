@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>NFA</title>
+    <!--template style-->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!--animation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!--jquery-->
+    <script src="js/jquery-3.1.0.min.js"></script>
+
+    <!--scrolla-->
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.animate').scrolla();
+        });
+    </script>
+</head>
+<body>
+
+<div class="nfa-content">
+    <div class="nfa">
+        <h1 class="nfa-heading animate" data-animate="bounceIn" data-delay="0.2s">What Is NFA?</h1>
+        <p class="nfa-define1 animate" data-animate="zoomIn" data-delay="0.5s">
+            An NFA, similar to a DFA, consumes a string of input symbols. For each input symbol, it transitions to a new state until all input symbols have been consumed. Unlike a DFA, it is non-deterministic, i.e., for some state and input symbol, the next state may be nothing or one or two or more possible states. Thus, in the formal definition, the next state is an element of the power set of the states, which is a set of states to be considered at once. The notion of accepting an input is similar to that for the DFA. When the last input symbol is consumed, the NFA accepts if and only if there is some set of transitions that will take it to an accepting state. Equivalently, it rejects, if, no matter what transitions are applied, it would not end in an accepting state.
+        </p>
+        <p class="nfa-define2 animate" data-animate="zoomIn" data-delay="0.8s">
+            An NFA is represented formally by a 5-tuple, <strong>(Q, Σ, Δ, q0, F)</strong>, consisting of :
+        </p>
+        <ul class="nfa-list">
+            <li class="animate" data-animate="zoomIn" data-delay="1.1s">a finite set of states Q</li>
+            <li class="animate" data-animate="zoomIn" data-delay="1.4s">a finite set of input symbols Σ</li>
+            <li class="animate" data-animate="zoomIn" data-delay="1.7s">a transition function Δ : Q × Σ → P(Q).</li>
+            <li class="animate" data-animate="zoomIn" data-delay="2s">an initial (or start) state q0 ∈ Q</li>
+            <li class="animate" data-animate="zoomIn" data-delay="2.3s">a set of states F distinguished as accepting (or final) states F ⊆ Q.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

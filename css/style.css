@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+
+}
+::selection{
+    background: tomato;
+}
+::-moz-selection{
+    background: tomato;
+}
+header{
+    background-image: url("../img/bg.jpg");
+    width: 100%;
+    height: 666px;
+    background-size: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: overlay;
+}
+a{
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+a:hover
+{
+    color: tomato;
+}
+.menu-content{
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 50px;
+}
+.menu-content input{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    outline: none;
+}
+.menu-content span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+.menu-content span:first-child{
+    transform-origin: 0% 0%;
+}
+.menu-content span:nth-child(2){
+    transform-origin: 0% 100%;
+}
+.menu-content input:checked ~ span{
+    opacity: 1;
+    transform: rotate(-45deg) translate(-3px, 1px);
+    background: #232323;
+}
+.menu-content input:checked ~ span:nth-child(2){
+    opacity: 1;
+    transform: rotate(45deg) translate(0, -1px);
+}
+.menu-content input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+.menu-list{
+    list-style: none;
+    position: absolute;
+    width: 300px;
+    height: 689px;
+    background: #ededed;
+    padding: 156px 50px 50px 50px;
+    margin: -100px 0 0 -50px;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+.menu-list li{
+    padding: 10px 0;
+    font-size: 22px;
+    outline: none;
+}
+.menu-content input:checked ~ ul{
+    transform: scale(1.0, 1.0);
+    opacity: 1;
+}
+
+
+/*=================================== contact us ===================================*/
+.contact-content{
+    background-image: url("../img/contact-bg.jpg");
+    width: 100%;
+    height: 666px;
+    background-size: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: overlay;
+}
+.contact-wrapper{
+    width: 500px;
+    height: 600px;
+    position: relative;
+    margin: 0 auto;
+}
+.contact-form {
+    position: relative;
+    top: 22%;
+    width: 400px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.contact-input {
+    width: 350px;
+    height: 40px;
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    color: #232323;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-left: 16px;
+    font-size: 17px;
+}
+input#contact-message {
+    height: 120px !important;
+}
+i.icon-users-1 {
+    position: relative;
+    color: #CCC;
+    float: left;
+    top: 8px;
+    margin-right: 3%;
+    font-size: 22px;
+}
+i.icon-mail-5 {
+    position: relative;
+    color: #CCC;
+    float: left;
+    top: 8px;
+    margin-right: 3%;
+    font-size: 22px;
+}
+i.icon-notebook-3 {
+    position: relative;
+    color: #CCC;
+    float: left;
+    top: 8px;
+    margin-right: 3%;
+    font-size: 22px;
+}
+i.icon-pencil {
+    position: relative;
+    color: #CCC;
+    float: left;
+    top: 8px;
+    margin-right: 3%;
+    font-size: 22px;
+}
+.contact-btn {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    top: 135px;
+    left: 42%;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 3px #232323;
+}
+.contact-btn:before ,
+.contact-btn:after{
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.transition{
+    transition: color 0.25s;
+}
+.transition:before ,
+.transition:after{
+    border: 3px solid transparent;
+    width: 0;
+    height: 0;
+}
+.transition::before {
+    top: 0;
+    left: 0;
+}
+.transition::after {
+    bottom: 0;
+    right: 0;
+}
+.transition:hover {
+    color: tomato;
+}
+.transition:hover::before,
+.transition:hover::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.transition:hover::before {
+    border-top-color: tomato;
+    border-right-color: tomato;
+    border-radius: 10px;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.transition:hover::after {
+    border-bottom-color: tomato;
+    border-left-color: tomato;
+    border-radius: 10px;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+/*============================ dfa ==============================*/
+.dfa-content ,
+.nfa-content{
+    background-image: url("../img/dfa-bg.jpg");
+    width: 100%;
+    height: 666px;
+    background-size: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: overlay;
+}
+.dfa , .nfa {
+    width: 700px;
+    margin: 0 auto;
+}
+.dfa-heading ,
+.nfa-heading {
+    color: #CCC;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 75px;
+}
+.dfa-define1 ,
+.nfa-define1{
+    margin: 0;
+    color: #CCC;
+    text-align: justify;
+    position: relative;
+    top: 134px;
+    line-height: 1.4;
+}
+.dfa-define2 , .nfa-define2 {
+    margin: 0;
+    color: #CCC;
+    text-align: justify;
+    position: relative;
+    top: 190px;
+    line-height: 1.4;
+}
+.nfa-define2 {
+    top: 170px;
+}
+.dfa-list , .nfa-list{
+    margin: 0;
+    color: #CCC;
+    position: relative;
+    top: 245px;
+    padding-left: 173px;
+    width: 570px;
+}
+.nfa-list {
+    top: 210px;
+}
+/*----------------------------- nfa to dfa ---------------------------*/
+.content{
+
+    position: relative;
+    width: 980px;
+    color: #ececec;
+    font-size: 28px;
+    left: 240px;
+    top: 75px;
+    height: 470px;
+}
+.sigma{
+
+    line-height: 3;
+}
+.add , .submit{
+    position: relative;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    border: 0;
+    font-size: 22px;
+    padding: 12px 22px;
+    border-radius: 10px;
+}
+.add{
+    margin: 26px;
+    left: 45%;
+    top: -23%;
+    color: #141414;
+    transition: color 0.5s linear;
+}
+.add:hover{
+    color: tomato;
+    transition: color 0.5s linear;
+}
+.submit{
+    margin: 8px;
+    left: 45%;
+    top: -20% !important;
+    color: #141414;
+    transition: color 0.5s linear;
+}
+.submit:hover{
+    color: tomato;
+    transition: color 0.5s linear;
+}
+input[type="number"]{
+    margin: 0;
+    border: 0;
+    padding: 7px;
+    border-radius: 6px;
+    position: relative;
+    top: -2px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    width: 82px;
+    outline: none;
+}
+.sigma span input ,
+.transfer p input{
+    border: 0;
+    padding: 7px;
+    border-radius: 6px;
+    position: relative;
+    top: -2px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    width: 82px;
+    outline: none;
+}

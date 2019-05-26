@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NFA To DFA</title>
+    <!--template style-->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!--animation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!--jquery-->
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--scrolla-->
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.animate').scrolla();
+        });
+    </script>
+
+
+</head>
+<body>
+
+
+<div class="container">
+    <header>
+        <nav role="navigation">
+            <div class="menu-content">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="menu-list">
+                    <a href="dfa.html"><li>What Is DFA?</li></a>
+                    <a href="nfa.html"><li>What is NFA?</li></a>
+                    <a href="contact.html"><li>contact</li></a>
+                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&cad=rja&uact=8&ved=0ahUKEwjc-cu48tjSAhWHDCwKHdkjB6IQFggsMAM&url=http%3A%2F%2Feng.uok.ac.ir%2Fdaneshfar%2FIntroductionToFormalLanguages%2FPeter%2520LinzBook%25205ed%2FAn%2520Introduction%2520to%2520Formal%2520Languages%2520and%2520Automata%2520-%25205th%2520Edition%2520-%25202011.pdf&usg=AFQjCNH7y0H38I1jI0WEOY2nVBxKFrCimA&sig2=lAmbbYQhaO_LO-p0ekl7bQ">
+                        <li>link to book</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+        <div class="content content-s">
+            <div class="sigma">
+                <span class="animate" data-animate="zoomIn" data-delay="0.3s">
+                    ○ Enter Sigma =
+                    <input type="text" maxlength="14" class="animate" data-animate="zoomIn" data-delay="0.6s">
+                    <input type="text" maxlength="7" class="animate" data-animate="zoomIn" data-delay="0.9s">
+                    <input type="text" class="animate" data-animate="zoomIn" data-delay="1.2s">
+                    <input type="text" maxlength="2" class="animate" data-animate="zoomIn" data-delay="1.5s">
+                    <input type="text" maxlength="2" class="animate" data-animate="zoomIn" data-delay="1.8s">  .
+                </span>
+            </div>
+            <div class="state">
+                <span class="animate" data-animate="zoomIn" data-delay="2.1s">
+                    ○ Number Of State =
+                    <input type="number" class="animate" data-animate="zoomIn" data-delay="2.4s"> .
+                </span>
+            </div>
+            <div class="transfer">
+                <p class="animate" data-animate="zoomIn" data-delay="2.7s">
+                    ○ State
+                    <input type="number" class="animate" data-animate="zoomIn" data-delay="3s"> ,
+                    By
+                    <input type="text" maxlength="14" class="animate" data-animate="zoomIn" data-delay="3.3s">
+                    <input type="text" maxlength="7" class="animate" data-animate="zoomIn" data-delay="3.6s">
+                    <input type="text" class="animate" data-animate="zoomIn" data-delay="3.9s">
+                    <input type="text" maxlength="2" class="animate" data-animate="zoomIn" data-delay="4.2s">
+                    <input type="text" maxlength="2" class="animate" data-animate="zoomIn" data-delay="4.5s"> ,
+                    Go To State
+                    <input type="number" class="animate" data-animate="zoomIn" data-delay="4.8s">  .
+                </p>
+            </div>
+
+        </div>
+        <button class="add animate" data-animate="zoomIn" data-delay="5.1s">ADD</button>
+        <button class="submit animate" data-animate="zoomIn" data-delay="5.4s">SUBMIT</button>
+    </header>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        $('.add').click(function(){
+            $('.content').fadeOut(1000);
+            $('.content-s').fadeIn(1000);
+        });
+    });
+</script>
+
+
+</body>
+</html>

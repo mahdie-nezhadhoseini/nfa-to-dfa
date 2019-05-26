@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DFA</title>
+
+    <!--template style-->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!--animation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!--jquery-->
+    <script src="js/jquery-3.1.0.min.js"></script>
+
+    <!--scrolla-->
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.animate').scrolla();
+        });
+    </script>
+
+</head>
+<body>
+
+<div class="dfa-content">
+    <div class="dfa">
+        <h1 class="dfa-heading animate" data-animate="bounceIn" data-delay="0.2s">What Is DFA?</h1>
+        <p class="dfa-define1 animate" data-animate="zoomIn" data-delay="0.5s">
+            a deterministic finite automaton (DFA)—also known as a deterministic finite accepter (DFA) and a deterministic finite state machine (DFSM)—is a finite-state machine that accepts and rejects strings of symbols and only produces a unique computation (or run) of the automaton for each input string.[1] Deterministic refers to the uniqueness of the computation
+        </p>
+        <p class="dfa-define2 animate" data-animate="zoomIn" data-delay="0.8s">A deterministic finite automaton M is a 5-tuple, <strong>(Q, Σ, δ, q0, F)</strong>, consisting of :</p>
+        <ul class="dfa-list">
+            <li class="animate" data-animate="zoomIn" data-delay="1.1s">a finite set of states (Q)</li>
+            <li class="animate" data-animate="zoomIn" data-delay="1.4s">a finite set of input symbols called the alphabet (Σ)</li>
+            <li class="animate" data-animate="zoomIn" data-delay="1.7s">a transition function (δ : Q × Σ → Q)</li>
+            <li class="animate" data-animate="zoomIn" data-delay="2s">an initial or start state (q0 ∈ Q)</li>
+            <li class="animate" data-animate="zoomIn" data-delay="2.3s">a set of accept states (F ⊆ Q)</li>
+        </ul>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!--template style-->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!--animation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!--jquery-->
+    <script src="js/jquery-3.1.0.min.js"></script>
+
+    <!--scrolla-->
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.animate').scrolla();
+        });
+    </script>
+
+    <!--fontello-->
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/fontello.css" type="text/css">
+</head>
+<body>
+
+<div class="contact-content">
+    <div class="contact-wrapper">
+        <div class="contact-form animate" data-animate="fadeInDown" data-delay="0.3s">
+            <input type="text" class="contact-input transition" id="contact-username" placeholder="UserName">
+            <i class="icon-users-1"></i>
+        </div>
+        <div class="contact-form animate" data-animate="fadeInDown" data-delay="0.6s">
+            <input type="email" class="contact-input transition" id="contact-email" placeholder="Email">
+            <i class="icon-mail-5"></i>
+        </div>
+        <div class="contact-form animate" data-animate="fadeInDown" data-delay="0.9s">
+            <input type="text" class="contact-input transition" id="contact-subject" placeholder="Subject">
+            <i class="icon-notebook-3"></i>
+        </div>
+        <div class="contact-form animate" data-animate="fadeInDown" data-delay="1.2s">
+            <input type="text" class="contact-input transition" id="contact-message" placeholder="Your Text...">
+            <i class="icon-pencil"></i>
+        </div>
+        <a href="#"><button class="contact-btn transition animate" data-animate="fadeInDown" data-delay="1.8s">
+            Contact Us</button>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
